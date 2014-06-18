@@ -27,5 +27,8 @@ BookerT::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  # Required for Heroku
+  # Note to set this to your actual host
+  # Done
+  config.action_mailer.default_url_options = { :host => 'bookert.herokuapp.com' }
 end
