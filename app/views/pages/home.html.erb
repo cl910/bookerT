@@ -1,11 +1,44 @@
 <div class="jumbotron text-center">
      <h1>Welcome to BookerT! We'll be adding cool stuff any time now.</h1>
      <% if user_signed_in? %>
-          # do something
-     <% else %>
+          Place the pins board here.
+     <% else %><br>
        <p>
          <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
        </p>
   <% end %>  
 </div>
+<div class="jumbotron">
+       <h2>About BookerT</h2><br>
+       <p style="font-size:24px">
+       	BookerT was founded to try to close the equity gap in higher education faced by many first-generation college students. 
+       </p>
+       <p style="font-size:24px">
+       	Students at institutions of higher learning face exorbitant textbook prices, and this issue generally hits harder for first-generation students and students of low income. BookerT aims to address the lack of mentorship and financial support that often prohibits students from excelling in college by connecting students with alumni mentors and donors. By working together with financial aid offices and scholarship programs in colleges all across America, BookerT will give first-generation college students the agency to take more control over their academic lives.
+       </p>
+</div>
+<div class="jumbotron">
+  <h2>How it Works</h2><br>
+  <p style="font-size:24px">
+    Students and mentor-donors must create an account and a basic profile that includes screenshots of the semester's textbook list and the prices of each book. The student's profile will then be visible to mentor-donors who have signed up and are looking to sponsor a student. In order to sponsor a student, a prospective donor must provide an upfront donation of 35% of the semester's textbook costs. At the end of the semester, the student uploads screenshots of final grades, and the mentor-donor can decide how much of the rest of the textbook costs to cover based upon a gradient. An example scale is offered below.
+    <br>
+    If a prospective donor does not wish to be tied to the 35% upfront donation requirement in order to be a mentor-donor, donations can still be made to the CrowdRefund Pool, which will be allocated to students who have not been sponsored.
+  </p>
+</div>
+<div class="jumbotron">
+    <h2>A Sample Gradient Scale</h2><br>
+      <p style="font-size:24px">
+        A .............................................. 65%<br>
+        A- ............................................. 60%<br>
+        B+ ............................................ 55%<br>
+        B .............................................. 50%<br>
+        B- ............................................. 45%<br>
+        C+ ............................................ 40%<br>
+        C .............................................. 35%<br>
+        C- ............................................. 30%<br>
+        D+ ............................................ 25%<br>
+        D or lower ................................. 20%
+      </p>
+</div>
+ 
