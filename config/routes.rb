@@ -1,9 +1,12 @@
 BookerT::Application.routes.draw do
-  resources :pins
+  resources :profiles
 
   devise_for :users
   root 'pages#home'
   get "pages/home"
+  get "about" => "pages#about"
+  get "donate" => "pages#donate"
+  get "palette" => "pages#palette"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

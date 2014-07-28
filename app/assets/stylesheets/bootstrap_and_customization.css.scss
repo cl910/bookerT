@@ -1,4 +1,14 @@
-$navbar-default-bg: #9b59b6;
+$navbar-default-bg: #34495e;
 $navbar-default-link-color: white;
+
+/* Need to make buttons same size regardless of text length
+.myButton {
+    width: 240px;
+    height: 40px;
+    padding: 12px 19px;
+    font-size: 2em;
+    line-height: 1.5em;
+
+} */
 
 @import 'bootstrap';

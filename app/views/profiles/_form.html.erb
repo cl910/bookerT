@@ -1,0 +1,43 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :Name %><br>
+    <%= f.text_field :Name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Gender %><br>
+    <%= f.text_field :Gender, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Birthdate %><br>
+    <%= f.text_field :Birthdate, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Email %><br>
+    <%= f.text_field :Email, class: "form-control" %>
+  </div>   
+  <div class="form-group">
+    <%= f.label :AboutMe %><br>
+    <%= f.text_area :AboutMe, class: "form-control" %>
+  </div>
+  <select class="form-control">
+    <option>Student</option>
+    <option>Donor/Mentor</option>
+  </select>
+  <span class="help-block">Please indicate what type of user you'll be.
+  </span> 
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

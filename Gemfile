@@ -33,6 +33,8 @@ gem 'activemerchant'
 #Twitter Bootstrap gem
 gem 'bootstrap-sass'
 
+gem 'paperclip', '~> 3.0'
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	#sqlite must be in the dev group because heroku will complain otherwise
