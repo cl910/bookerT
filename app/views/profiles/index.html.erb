@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>      
       <th>Name</th>
       <th>Gender</th>
       <th>Birthdate</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
+        <td><%= image_tag profile.image.url(:thumb) %></td>
         <td><%= profile.Name %></td>
         <td><%= profile.Gender %></td>
         <td><%= profile.Birthdate %></td>

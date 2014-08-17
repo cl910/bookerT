@@ -1,4 +1,4 @@
-<%= form_for(@profile) do |f| %>
+<%= form_for @profile, :html => { :multipart => true } do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="form-group">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
   <div class="form-group">
     <%= f.label :Name %><br>
     <%= f.text_field :Name, class: "form-control" %>
@@ -28,14 +32,16 @@
     <%= f.text_field :Email, class: "form-control" %>
   </div>   
   <div class="form-group">
-    <%= f.label :AboutMe %><br>
+    <%= f.label :AboutMe, "About Me" %><br>
     <%= f.text_area :AboutMe, class: "form-control" %>
   </div>
-  <select class="form-control">
+  <select class="form-control" style="width:20em">
     <option>Student</option>
-    <option>Donor/Mentor</option>
+    <option>Mentor Only</option>
+    <option>Sponsor Only</option>
+    <option>Sponsor-Mentor</option>
   </select>
-  <span class="help-block">Please indicate what type of user you'll be.
+  <span class="help-block">Please indicate what type of user you'll be.<br><br>
   </span> 
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>
