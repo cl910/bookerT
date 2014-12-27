@@ -2,7 +2,7 @@
      <h1 style="color:white;">Welcome to BookerT! <br>To subscribe to our newsletter, sign up below.</h1>
      <% if user_signed_in? %><br>
         	<%= link_to "Donate to the BookerT Fund", donate_path, class: "btn btn-success btn-lg custom" %>
-        	<%= link_to "View Student Profiles", new_profile_path, class: "btn btn-warning btn-lg custom" %>
+        	<%= link_to "View Student Profiles", profiles_path, class: "btn btn-warning btn-lg custom" %>
           <%= link_to "Create Profile", new_profile_path, class: "btn btn-primary btn-lg custom" %>
      <% else %><br>
        <p>

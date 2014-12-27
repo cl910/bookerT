@@ -4,6 +4,6 @@ class DropPinsTable < ActiveRecord::Migration
   end
 
   def down
-  	create_table :pins
+  	raise ActiveRecord::IrreversibleMigration
   end
 end

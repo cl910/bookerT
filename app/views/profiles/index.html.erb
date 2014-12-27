@@ -1,21 +1,20 @@
 <div id="profiles">
   <% @profiles.each do |profile| %>
-    <div class="box">
-        <%= image_tag profile.image.url(:medium) %> 
-        <%= profile.Name %>
-    NOTE: Make the following info appear when hover? or click?
-        <%= profile.Gender %>
-        <%= profile.Birthdate %>
-        <%= profile.Email %>
-        <%= profile.AboutMe %>
-        <%= pin.user.email if pin.user %>
+    <div class="box" style="font-size:24px">
+        <%= image_tag profile.image.url(:medium) %> <br>
+        <%= profile.Name %> <br>
+        <%#= profile.Gender %>
+        <%#= profile.Birthdate %>
+        <%#= profile.Email %>
+        <%#= profile.AboutMe %>
+        <%#= profile.user.email if profile.user %>
         <%= link_to 'Show', profile %>
         <% if profile.user == current_user %>
           <%= link_to 'Edit', edit_profile_path(profile) %>
-          <%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %> <br> <br>
       <% end %>
     </div>
   <% end %>
 <br>
-<%= link_to 'New Profile', new_profile_path %>
+<%#= link_to 'New Profile', new_profile_path %>
 </div>
