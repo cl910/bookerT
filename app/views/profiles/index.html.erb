@@ -8,7 +8,7 @@
         <%#= profile.Email %>
         <%#= profile.AboutMe %>
         <%#= profile.user.email if profile.user %>
-        <%= link_to 'Showblahblahblah', profile %>
+        <%= link_to 'Show', profile %>
         <%# if profile.user == current_user %>
           <%= link_to 'Edit', edit_profile_path(profile) %>
           <%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' } %> <br> <br>
