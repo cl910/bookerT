@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
-    @profile = current_user.profiles.build
+    @profile = Profile.new
   end
 
   # GET /profiles/1/edit
@@ -24,7 +24,7 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    @profile = current_user.profiles.build(profile_params)
+    @profile = Profile.new(profile_params)
 
     respond_to do |format|
       if @profile.save
